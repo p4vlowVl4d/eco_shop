@@ -1,6 +1,6 @@
 <?php
 
-class AdminController
+class AdminController extends AdminBase
 {
 	
 	public function actionLogin()

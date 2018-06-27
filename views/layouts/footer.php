@@ -26,7 +26,7 @@
         </div>
 
     </footer>
-    <script src="/template/js/main.js" async></script>
+    <script src="/template/js/script.js" async></script>
 </body>
 
 </html>
