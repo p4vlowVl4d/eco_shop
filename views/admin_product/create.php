@@ -34,10 +34,10 @@
                         <p>Название товара</p>
                         <input type="text" name="name" placeholder="" value="">
 
-                        <p>Артикул</p>
-                        <input type="text" name="code" placeholder="" value="">
+                        <p>Фасовка(литр)</p>
+                        <input type="text" name="weight" placeholder="" value="">
 
-                        <p>Стоимость, $</p>
+                        <p>Стоимость(руб)</p>
                         <input type="text" name="price" placeholder="" value="">
 
                         <p>Категория</p>

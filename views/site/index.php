@@ -180,7 +180,7 @@
                 <?php foreach ($latestProduct as $value):?>
                 <div class="newProduct-str-product">
                     <a href="/product/<?= $value['id']?>">
-                    <img src="/template/img/product/<?= $value['image']?>" alt="" class="img-prod" width="200">
+                    <img src="<?php Product::getImage($value['id'])?>" alt="" class="img-prod" width="200">
                     </a>
                     <div class="newProduct-str-product-text">
                         <p class="newProduct-str-product-text_name"><?= $value['name']?></p>

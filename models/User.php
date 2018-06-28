@@ -88,7 +88,7 @@ class User
 		if(isset($_SESSION['user'])){
 			return $_SESSION['user'];
 		}
-		header("Location: /user/login");
+		header("Location: /login");
 	}
 	public static function isGuest(){
 		
@@ -120,5 +120,16 @@ class User
 		$result->bindParam(':name', $name, PDO::PARAM_STR);
 		$result->bindParam(':password', $password, PDO::PARAM_STR);
 		return $result->execute();
+	}
+	public static function checkUserRole($id)
+	{
+		$db = Db::getConnection();
+		
+		$result = $db->query("SELECT * FROM users WHERE id='$id'");
+		$role = $result->fetch();
+		if($role['role'] == 'admin'){
+			return true;
+		}
+		return false;
 	}
 }

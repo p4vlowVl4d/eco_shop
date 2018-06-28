@@ -65,9 +65,20 @@ class UserController
 			if($userId == false){
 				$errors[] = 'Неправильные данные для входа';
 			}else{
-				User::auth($userId);
+				
 
-				header("Location: /cabinet/");
+				$userRole = User::checkUserRole($userId);
+
+				if($userRole){
+
+					header('Location: /admin/');
+
+				}else{
+
+					header("Location: /cabinet/");
+
+				}
+				User::auth($userId);
 			}
 		}
 		require_once(ROOT.'/views/user/login.php');

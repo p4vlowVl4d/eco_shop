@@ -43,4 +43,14 @@ class Blog
 
 		return $newsList;
   }
+  public static function deleteNewsById($id)
+  {
+    $db = Db::getConnection();
+
+    $sql = 'DELETE FROM news WHERE id = ":id"';
+
+    $result = $db->prepare($sql);
+    $result->bindParam(':id',$id, PDO::PARAM_INT);
+    return $result->execute();
+  }
 }

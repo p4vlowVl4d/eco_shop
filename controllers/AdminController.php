@@ -1,15 +1,19 @@
 <?php
 
+
 class AdminController extends AdminBase
 {
-	
-	public function actionLogin()
-	{
-		include_once(ROOT.'/backend/views/login/index.php');
-		return true;
-	}
-	public function actionIndex()
-	{
-		return true;
-	}
+    /**
+     * Action для стартовой страницы "Панель администратора"
+     */
+    public function actionIndex()
+    {
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Подключаем вид
+        require_once(ROOT . '/views/admin/index.php');
+        return true;
+    }
+
 }

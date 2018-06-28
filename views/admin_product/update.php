@@ -26,8 +26,8 @@
                         <p>Название товара</p>
                         <input type="text" name="name" placeholder="" value="<?php echo $product['name']; ?>">
 
-                        <p>Артикул</p>
-                        <input type="text" name="code" placeholder="" value="<?php echo $product['code']; ?>">
+                        <p>Фасовка(литр)</p>
+                        <input type="text" name="weight" placeholder="" value="<?php echo $product['weight']; ?>">
 
                         <p>Стоимость, $</p>
                         <input type="text" name="price" placeholder="" value="<?php echo $product['price']; ?>">
