@@ -8,13 +8,13 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
-                    <li class="active">Управление товарами</li>
+                    <li class="active">Управление блогом</li>
                 </ol>
             </div>
 
-            <a href="/admin/blog/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить товар</a>
+            <a href="/admin/blog/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить запись</a>
             
-            <h4>Список товаров</h4>
+            <h4>Список записей</h4>
 
             <br/>
 

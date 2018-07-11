@@ -245,6 +245,32 @@ button:hover {
     box-sizing: border-box;
     overflow: hidden;
     color: white;
+    .cycle-slideshow{
+        min-width: 200%;
+        
+    }
+    .recommended-item-control{
+        width: 30px;
+        height: 30px;
+        position:absolute;
+        text-align:center;
+        background: orange;
+        color:white;
+        font-size: 25px;
+        font-weight: bold;
+        &:hover{
+            background: rgba(0,0,0, .4);
+            color:$hoverNav;
+        }
+    }
+    .left {
+        top: 40%;
+        left:-5px;
+    }
+    .right{
+        top: 40%;
+        right: -35px;
+    }
     .typical-input{
         width: 250px;
         height: 35px;
@@ -896,23 +922,30 @@ button:hover {
             width: 100%;
             height: 100%;
             margin-top: 10px;
-            overflow: hidden;
+            box-sizing:border-box;
+            position:relative;
             .carousel-line {
-                min-width: 200%;
-                display: flex;
-                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                overflow:hidden;
+                box-sizing:border-box;
+                .cycle-slideshow{
+                    width: 100%;
+                    box-sizing:border-box;
+                }
                 .b_product {
                     width: 250px;
                     min-height: 320px;
                     border: 1px solid silver;
                     box-sizing: border-box;
-                    margin-left: 50px;
                     text-align:center;
+                    margin-left:40px;
                     &:first-child {
                         margin-left: 0;
                     }
                     .img-prod {
                         margin-left: 3px;
+                        height: 200px;
                     }
                     .b_product-text {
                         width: 95%;
@@ -1007,6 +1040,7 @@ button:hover {
         background-size: cover;
         background-position: center;
         padding-top: 70px;
+        clear:both;
         .textBlock-border {
             width: 50%;
             min-height: 350px;

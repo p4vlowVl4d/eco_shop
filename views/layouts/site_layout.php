@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Page Title</title>
+    <title><?=$this->options['title']?></title>
     <meta charset="<?=mb_internal_encoding()?>">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="/template/css/style.css" type="text/css">
@@ -64,3 +64,42 @@
                 <p>в нижнем новгороде</p>
             </div>
         </header>
+
+    <?php require_once($content); ?>
+    
+        </div>
+        <footer>
+
+        <div class="f-logo">
+            <a href="#">eco shop</a>
+            <div class="f-logo_copyright">
+                <p>&copy;Copyright. Все права защищены.</p>
+            </div>
+        </div>
+        <div class="f-nav">
+            <div class="f-nav-left">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about/">О нас</a></li>
+                    <li><a href="/product/">Каталог</a></li>
+                    <li><a href="/contacts/">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="f-nav-right">
+                <ul>
+                    <li><a href="#">Ягоды</a></li>
+                    <li><a href="#">Грибы</a></li>
+                    <li><a href="#">Рыба</a></li>
+                    <li><a href="#">Подарки</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+ 
+    <script src="/template/js/jquery.cycle2.min.js"></script>
+    <script src="/template/js/jquery.cycle2.carousel.min.js"></script>
+    <script src="/template/js/script.js"></script>
+</body>
+
+</html>

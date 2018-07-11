@@ -13,7 +13,7 @@
 			<a href="/blog/<?=$value['id']?>"><?=$value['title']?></a>
 		</div>
 		<div class="image-news">
-			<img src="/template/img/blog/<?=$value['image']?>" alt="" width="500">
+			<img src="<?=Blog::getImages($value['id'])?>" alt="" width="500">
 		</div>
 	<div class="content-news">
 		<p><?=$value['short_content']?>.....</p>

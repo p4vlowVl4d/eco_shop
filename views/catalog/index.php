@@ -24,7 +24,7 @@
                   <?php foreach ($productList as $product):?>
                     
                    <div class="products-str-product"><a href="/product/<?= $product['id']?>">
-                       <img src="<?php Product::getImage($product['id']) ?>" alt="" class="img-prod" width="200">
+                       <img src="<?= Product::getImage($product['id']) ?>" alt="" class="img-prod" width="200">
                    </a>
                     <div class="products-str-product-text">
                         <p class="products-str-product-text_name"><?= $product['name']?></p>

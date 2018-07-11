@@ -17,7 +17,7 @@
                         <tr data-id="<?=$product['id']?>">
                             <td>
                                 <p style="color: aqua"><?=$product['name']?></p>
-                                <img src="/template/img/product/<?=$product['image']?>" alt="" width="140">
+                                <img src="<?=Product::getImage($product['id']);?>" alt="" width="140">
                             </td>
                             <td><div class="quantity">
                                 <span><p id="plus">+</p><p class="num"><?=$productsInCart[$product['id']]?></p><p id="minus">-</p></span></div></td>

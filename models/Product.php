@@ -9,12 +9,11 @@ class Product
     $db = Db::getConnection();
     $productsList = array();
     $count = self::SHOW_BY_DEFAULT;
-    $result = $db->query("SELECT id, name, price, image, is_new, brand FROM product WHERE status = '1' ORDER BY id ASC LIMIT $count");
+    $result = $db->query("SELECT id, name, price, is_new, brand FROM product WHERE status = '1' ORDER BY id ASC LIMIT $count");
     $i = 0;
     while($row = $result->fetch()){
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
-            $productsList[$i]['image'] = $row['image'];
             $productsList[$i]['price'] = $row['price'];
             $productsList[$i]['is_new'] = $row['is_new'];
             $productsList[$i]['brand'] = $row['brand'];
@@ -22,19 +21,33 @@ class Product
     }
     return $productsList;
  }
+ public static function getRecommendedProducts(){
+    $db = Db::getConnection();
+    $result = $db->query('SELECT id, name, price, is_new, brand FROM product WHERE is_recommended="1" AND status="1"');
+    $recommendedProduct = array();
+    $i = 0;
+    while($row = $result->fetch()){
+        $recommendedProduct[$i]['id'] = $row['id'];
+        $recommendedProduct[$i]['name'] = $row['name'];
+        $recommendedProduct[$i]['price'] = $row['price'];
+        $recommendedProduct[$i]['brand'] = $row['brand'];
+        $recommendedProduct[$i]['is_new'] = $row['is_new'];
+        $i++;
+    }
+    return $recommendedProduct;
+ }
 public static function getLatestProducts($count = self::SHOW_BY_DEFAULT)
     {
         $count = intval($count);
         $db = Db::getConnection();
         $productsList = array();
 
-        $result = $db->query("SELECT id, name, price, image, is_new, brand FROM product WHERE status = '1' ORDER BY id DESC LIMIT  $count");
+        $result = $db->query("SELECT id, name, price, is_new, brand FROM product WHERE status = '1' ORDER BY id DESC LIMIT  $count");
 
         $i = 0;
         while ($row = $result->fetch()) {
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
-            $productsList[$i]['image'] = $row['image'];
             $productsList[$i]['price'] = $row['price'];
             $productsList[$i]['is_new'] = $row['is_new'];
             $productsList[$i]['brand'] = $row['brand'];

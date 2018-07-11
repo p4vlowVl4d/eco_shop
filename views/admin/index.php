@@ -19,6 +19,7 @@
                 <li><a href="/admin/category">Управление категориями</a></li>
                 <li><a href="/admin/order">Управление заказами</a></li>
                 <li><a href="/admin/blog">Управление блогом</a></li>
+                <li><a href="/admin/config">Дополнительные настройки</a></li>
             </ul>
             
         </div>

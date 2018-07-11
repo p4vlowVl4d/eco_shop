@@ -1,8 +1,8 @@
 <?php
 
-require_once ROOT.'/models/Blog.php';
 
-class BlogController
+
+class BlogController extends BaseController
 {
 	public $date;
 	public function actionIndex()

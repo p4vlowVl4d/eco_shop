@@ -166,6 +166,26 @@ button:hover {
   box-sizing: border-box;
   overflow: hidden;
   color: white; }
+  .wrapper .cycle-slideshow {
+    min-width: 200%; }
+  .wrapper .recommended-item-control {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    background: orange;
+    color: white;
+    font-size: 25px;
+    font-weight: bold; }
+    .wrapper .recommended-item-control:hover {
+      background: rgba(0, 0, 0, 0.4);
+      color: #303030; }
+  .wrapper .left {
+    top: 40%;
+    left: -5px; }
+  .wrapper .right {
+    top: 40%;
+    right: -35px; }
   .wrapper .typical-input {
     width: 250px;
     height: 35px;
@@ -691,22 +711,28 @@ button:hover {
       width: 100%;
       height: 100%;
       margin-top: 10px;
-      overflow: hidden; }
+      box-sizing: border-box;
+      position: relative; }
       .wrapper .bestProduct .carousel .carousel-line {
-        min-width: 200%;
-        display: flex;
-        position: relative; }
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box; }
+        .wrapper .bestProduct .carousel .carousel-line .cycle-slideshow {
+          width: 100%;
+          box-sizing: border-box; }
         .wrapper .bestProduct .carousel .carousel-line .b_product {
           width: 250px;
           min-height: 320px;
           border: 1px solid silver;
           box-sizing: border-box;
-          margin-left: 50px;
-          text-align: center; }
+          text-align: center;
+          margin-left: 40px; }
           .wrapper .bestProduct .carousel .carousel-line .b_product:first-child {
             margin-left: 0; }
           .wrapper .bestProduct .carousel .carousel-line .b_product .img-prod {
-            margin-left: 3px; }
+            margin-left: 3px;
+            height: 200px; }
           .wrapper .bestProduct .carousel .carousel-line .b_product .b_product-text {
             width: 95%;
             box-sizing: border-box;
@@ -782,7 +808,8 @@ button:hover {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding-top: 70px; }
+    padding-top: 70px;
+    clear: both; }
     .wrapper .textBlock .textBlock-border {
       width: 50%;
       min-height: 350px;

@@ -26,7 +26,10 @@
         </div>
 
     </footer>
-    <script src="/template/js/script.js" async></script>
+ 
+    <script src="/template/js/jquery.cycle2.min.js"></script>
+    <script src="/template/js/jquery.cycle2.carousel.min.js"></script>
+    <script src="/template/js/script.js"></script>
 </body>
 
 </html>

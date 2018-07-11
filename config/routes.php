@@ -29,14 +29,17 @@ return array(
     'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
     //Управление записями
-    'admin/blog/delete/([0-9]+)'=>'adminBlog/delete/$1',
+    'admin/blog/delete/([0-9]+)'=> 'adminBlog/delete/$1',
     'admin/blog/update/([0-9]+)'=> 'adminBlog/update/$1',
+    'admin/blog/view/([0-9]+)'=> 'adminBlog/view/$1',
     'admin/blog/create' => 'adminBlog/create',
      'admin/blog' => 'adminBlog/index',
 
     // Админпанель:
+    'admin/config'=> 'adminConfig/index',
     'admin' => 'admin/index',
     'admin/login'=> 'admin/login',
+    
 
    'user/logout' => 'user/logout',
    'cabinet/edit' => 'cabinet/edit',
@@ -46,9 +49,10 @@ return array(
    'about'=>'about/about',
    'sign_up' => 'user/register',
    'login' => 'user/login',
-   'contacts'=>'about/contacts',
+   'contacts'=>'site/contacts',
     'product' => 'product/catalog', // actionIndex в CatalogController
     'blog'=> 'blog/index',
+    'home'=>'site/index',
     '' => 'site/index', // actionIndex в SiteController
 
 );

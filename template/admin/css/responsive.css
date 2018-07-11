@@ -6,7 +6,9 @@
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
  
- 
+ textarea {
+    border: 2px solid #696763;
+}
 .usa{
 	margin-right: 0;
 } 

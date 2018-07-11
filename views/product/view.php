@@ -8,7 +8,7 @@
                 <div class="single-product-presentation">
                     <div class="single-product-str">
                         <div class="single-product-presentation-img">
-                            <img src="<?php Product::getImage($productById['id']);?>" alt="">
+                            <img src="<?php echo Product::getImage($productById['id']);?>" alt="">
                         </div>
                         <div class="single-product-presentation-inf">
                             <div class="presence">

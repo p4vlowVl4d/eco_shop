@@ -13,7 +13,7 @@
 			<p><?=$newsItem['title']?></p>
 		</div>
 		<div class="image-news">
-			<img src="/template/img/blog/<?=$newsItem['image']?>" alt="">
+			<img src="<?= Blog::getImages($newsItem['id'])?>" alt="">
 		</div>
 	<div class="content-news">
 		<p><?=$newsItem['content']?></p>
